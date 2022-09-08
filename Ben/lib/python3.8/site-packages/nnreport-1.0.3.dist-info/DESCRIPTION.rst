@@ -1,0 +1,3 @@
+这个是unittest产生好看的报告的模块，其实就是BeautifulReport，只是为了方便安装放到了pipy上，可以随时pip
+
+

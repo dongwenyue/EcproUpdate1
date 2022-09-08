@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: Pyntifex
+Version: 0.0.14
+Summary: NOTE: Package file fixed, source is in package now! - A little encryption keystream, password generation, and tableau lookup distribution centered around Bruce Schneier's Pontifex (or Solitaire) keystream algorithm.  This implementation is more flexible than others online, in that one can variate away from 52 members and use objects instead of letters.  Download this if you seek a killer password generating program or would like to use a form of Schneier's Pontifex/Solitaire in your program!
+Home-page: https://www.facebook.com/LucianSolaris
+Author: Daniel Dillon Duffield
+Author-email: LucianSolaris@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Provides: password
+Provides: formatter
+Provides: solitaire
+Provides: vtableau
+Provides: pyrand

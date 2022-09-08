@@ -1,0 +1,13 @@
+Metadata-Version: 2.0
+Name: nnreport
+Version: 1.0.3
+Summary: 这个是unittest产生好看的报告的模块，其实就是BeautifulReport，只是为了方便安装放到了pipy上，可以随时pip，没有任何别的意思
+Home-page: https://github.com/TesterlifeRaymond/BeautifulReport
+Author: Raymond
+Author-email: Raymond@163.com
+License: MIT
+Keywords: 其实就是BeautifulReport
+
+这个是unittest产生好看的报告的模块，其实就是BeautifulReport，只是为了方便安装放到了pipy上，可以随时pip
+
+
