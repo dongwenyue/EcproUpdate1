@@ -561,13 +561,13 @@ if __name__ == '__main__':
     # 淘宝型号问题，不处理
     # 店铺未授权的情况，不处理
     # 唯品会多色多详情页，不处理
-    # prefix = '0112GZgirl161939'
-    # HOST = 'qa'
-    # Version = '3.0'
-    prefix = sys.argv[1]
-    HOST = sys.argv[2]
-    Version = sys.argv[3]
-    sale_status = sys.argv[4]
+    prefix = '0112GZgirl161939'
+    HOST = 'qa'
+    Version = '3.0'
+    # prefix = sys.argv[1]
+    # HOST = sys.argv[2]
+    # Version = sys.argv[3]
+    # sale_status = sys.argv[4]
 
     cms_number, cms_password, CMS_HOST, CMS_PUB_HOST = host(HOST, Version)
     CMS_token, CMS_account_id = cms_account(CMS_HOST, cms_number, cms_password)

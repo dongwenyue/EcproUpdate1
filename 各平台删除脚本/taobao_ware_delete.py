@@ -192,10 +192,11 @@ class TMallAPP(APP):
 if __name__ == '__main__':
     app_key = '27727487'
     app_secret = '7c17ec2e103c7f6d786468ff8a3ce1e5'
-    #淘宝 安奈儿
-    TB_An_Token = '6201f26d3471c05734c63eecb5c31e26c3ZZbcb2ae6d5a7791922214'
-    #淘宝 monkey_29
-    TB_Monkey_Token = '620291368e3941a4f5fc7ZZ61a382b75a64cb6150b937fe111328967'
+    # #淘宝 安奈儿
+    # TB_An_Token = '6201f26d3471c05734c63eecb5c31e26c3ZZbcb2ae6d5a7791922214'
+    # #淘宝 monkey_29
+    # TB_Monkey_Token = '620291368e3941a4f5fc7ZZ61a382b75a64cb6150b937fe111328967'
+    TB_MiDi_Token ='6200d0171ZZc498bf998257d1d5b28697b9b1c5235b8bcb2924684344'
 
 
     methods = 'taobao.items.inventory.get'
@@ -203,7 +204,7 @@ if __name__ == '__main__':
 
 
     tmall_app = TMallAPP(app_key, app_secret)
-    props_list = tmall_app.taobao_products_search( TB_An_Token, methods)
+    props_list = tmall_app.taobao_products_search( TB_MiDi_Token, methods)
     succeed_list = []
     error_list = []
 
@@ -214,7 +215,7 @@ if __name__ == '__main__':
         while 1:
             try:
                 # raise Exception
-                tmall_app.alibaba_item_operate_delete( TB_An_Token, methods_delete, num_iid)
+                tmall_app.alibaba_item_operate_delete( TB_MiDi_Token, methods_delete, num_iid)
                 succeed_list.append(title)
             except:
                 print('删除重试', num_iid, num, '次')
@@ -231,7 +232,7 @@ if __name__ == '__main__':
     WX_del_HOOK = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=9e04f752-749b-49a9-854c-ab7c7127f3f8'
     project = '删除'
     start_time = time.strftime("%m%dT%H:%M:%S", time.localtime())
-    name = '淘宝安奈儿天使兔店:安奈儿天使兔:易尚货 Ane20220530'
+    name = '淘宝：谜底品牌折扣店:miidii3  midi2022'
     total = len(props_list)
     succeed_total = len(succeed_list)
     error_total = len(error_list)
@@ -239,45 +240,45 @@ if __name__ == '__main__':
     failing_title = ", ".join([str(i) for i in error_list])
     mess = wechatRebot_send().test_robot(WX_del_HOOK,project,start_time,name,total,succeed_total,error_total,succeed_title,failing_title)
 
-    #淘宝 monkey_29
-    tmall_app = TMallAPP(app_key, app_secret)
-    props_list = tmall_app.taobao_products_search(TB_Monkey_Token, methods)
-    succeed_list = []
-    error_list = []
+    # #淘宝 monkey_29
+    # tmall_app = TMallAPP(app_key, app_secret)
+    # props_list = tmall_app.taobao_products_search(TB_MiDi_Token, methods)
+    # succeed_list = []
+    # error_list = []
 
-    for num_iid, title in props_list.items():
-        print(title, num_iid)
-
-        num = 1
-        while 1:
-            try:
-                # raise Exception
-                tmall_app.alibaba_item_operate_delete(TB_Monkey_Token, methods_delete, num_iid)
-                succeed_list.append(title)
-            except:
-                print('删除重试', num_iid, num, '次')
-                time.sleep(1)
-                num += 1
-                if num > 10:
-                    print(num_iid, num, '10次失败')
-                    error_list.append(title)
-                    break
-            else:
-                break
-    print('所有失败', error_list)
-
-    WX_del_HOOK = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=9e04f752-749b-49a9-854c-ab7c7127f3f8'
-    project = '删除'
-    start_time = time.strftime("%m%dT%H:%M:%S", time.localtime())
-    name = '淘宝:monkey_29 monkey_29'
-    total = len(props_list)
-    succeed_total = len(succeed_list)
-    error_total = len(error_list)
-    succeed_title = ", ".join([str(i) for i in succeed_list])
-    failing_title = ", ".join([str(i) for i in error_list])
-    mess = wechatRebot_send().test_robot(WX_del_HOOK, project, start_time, name, total, succeed_total, error_total,
-                                         succeed_title, failing_title)
-
+    # for num_iid, title in props_list.items():
+    #     print(title, num_iid)
+    #
+    #     num = 1
+    #     while 1:
+    #         try:
+    #             # raise Exception
+    #             tmall_app.alibaba_item_operate_delete(TB_Monkey_Token, methods_delete, num_iid)
+    #             succeed_list.append(title)
+    #         except:
+    #             print('删除重试', num_iid, num, '次')
+    #             time.sleep(1)
+    #             num += 1
+    #             if num > 10:
+    #                 print(num_iid, num, '10次失败')
+    #                 error_list.append(title)
+    #                 break
+    #         else:
+    #             break
+    # print('所有失败', error_list)
+    #
+    # WX_del_HOOK = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=9e04f752-749b-49a9-854c-ab7c7127f3f8'
+    # project = '删除'
+    # start_time = time.strftime("%m%dT%H:%M:%S", time.localtime())
+    # name = '淘宝:monkey_29 monkey_29'
+    # total = len(props_list)
+    # succeed_total = len(succeed_list)
+    # error_total = len(error_list)
+    # succeed_title = ", ".join([str(i) for i in succeed_list])
+    # failing_title = ", ".join([str(i) for i in error_list])
+    # mess = wechatRebot_send().test_robot(WX_del_HOOK, project, start_time, name, total, succeed_total, error_total,
+    #                                      succeed_title, failing_title)
+    #
 
 
 

@@ -108,7 +108,7 @@ class AllTest:  # 定义一个类AllTest
 # scheduler.start()
 
 if __name__ == '__main__':
-    # AllTest().run()
-    file_text = '\u6ce8\u518c\u6210\u529f'
-    data = json.dumps(file_text,ensure_ascii=False)
-    print(data)
+    AllTest().run()
+    # file_text = '\u6ce8\u518c\u6210\u529f'
+    # data = json.dumps(file_text,ensure_ascii=False)
+    # print(data)

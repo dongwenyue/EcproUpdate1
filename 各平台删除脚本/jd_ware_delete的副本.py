@@ -179,9 +179,9 @@ if __name__ == '__main__':
     appKey = '175DE92C342EEAA29C0AC305DB79C996'
     appSecret = '37b0829a675f43a994d10d1a9da3b506'
     # 京东女装
-    JD_NV_TOKEN = '1c7e085a3c9b433d8785361f56f77269ta4n'
+    # JD_NV_TOKEN = '1c7e085a3c9b433d8785361f56f77269ta4n'
     # 京东男装
-    JD_NAN_TOKEN = 'b8bf81966d024d92b4f726a478dc24f0xoty'
+    JD_NAN_TOKEN = '9899593d50fa415791dd4ebd7a4264755m2q'
     Method = 'jingdong.ware.read.searchWare4Valid'
     Method_delete = 'jingdong.ware.write.delete'
 

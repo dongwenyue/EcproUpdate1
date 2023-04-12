@@ -9,7 +9,8 @@ import requests
 import datetime
 import time
 import pprint
-import MySQLdb
+import pymysql
+
 
 class wechatRebot_send:
     def __init__(self):
@@ -56,7 +57,7 @@ def get_access_token_select_mysql():
     # db = MySQLdb.connect("rm-2zeb07rt531eym8of1o.mysql.rds.aliyuncs.com", "qa_v2", "lyp82nLF", "qa_v2_merchant", charset='utf8' )
     Token_list = {}
     try:
-        db = MySQLdb.connect(
+        db = pymysql.connect(
             # host='rm-2zeb07rt531eym8of1o.mysql.rds.aliyuncs.com',
             host='rm-2ze69dr39e1217univo.mysql.rds.aliyuncs.com',
             port=3306,
@@ -129,7 +130,7 @@ def product_listV2(uri, app_key, app_secret, access_token):
         #     print(res.text)
         # else:
         #     raise Exception('token error')
-        if res.json()['message'] == 'success':
+        if res.json()['msg'] == 'success':
             pass
         else:
             raise Exception('token error')
@@ -187,7 +188,7 @@ def product_del(del_uri, app_key, app_secret, access_token, product_id):
     })
     print(res.url)
     # pprint.pprint(res.json())
-    if res.json()['message'] == 'success':
+    if res.json()['msg'] == 'success':
         print('删除成功')
     else:
         print('删除失败')
@@ -199,7 +200,7 @@ if __name__ == '__main__':
     app_key = "6857846430536893960"
     app_secret = '605d9a9b-1003-45f2-8d5f-056a68f91616'
     # access_token = get_access_token_select_mysql()
-    access_token = '40eb9c71-6d6d-474e-ad0d-1d8c5874a3eb'
+    access_token = '33b2ffa9-78ea-4027-a75a-0828055ca53d'
     access_token_slicer = access_token[0]
     # 抖音token有效期为7天,抖音的刷新API不能用。都刷新不了
     # 伊木子：eaf40a32-5b84-49bb-8b80-f15cfa569e09
@@ -230,7 +231,8 @@ if __name__ == '__main__':
     WX_del_HOOK = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=9e04f752-749b-49a9-854c-ab7c7127f3f8'
     project = '删除'
     start_time = time.strftime("%m%dT%H:%M:%S", time.localtime())
-    name = '抖音清馨女装: 17852550399'
+    # name = '抖音清馨女装: 17852550399'
+    name = 'EXCEPTIONDEMIXMIND服饰旗舰店'
     total = len(props_list)
     succeed_total = len(succeed_list)
     error_total = len(error_list)
